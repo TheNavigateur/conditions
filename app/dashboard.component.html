@@ -1,0 +1,31 @@
+<div>
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+</div>
+<div class="grid grid-pad">
+  <div  *ngFor="let hero of heroes | async" (click)="showSynonyms(hero)" class="col-1-4">
+    <div class="module hero">
+      <h4>{{hero.label}}</h4>
+    </div>
+  </div>
+</div>
+<div *ngIf="synonymsToShow" class="modal fade show in" id="myModal" role="dialog" (click)="hideSynonyms()">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Synonyms:</h4>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="synonymsToShow.length">
+          <div *ngFor="let synonym of synonymsToShow">
+            <div>
+              <h4>{{synonym}}</h4>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="!synonymsToShow.length">
+          There are no synonyms
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

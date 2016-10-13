@@ -1,0 +1,18 @@
+{
+  "name": "conditions-app",
+  "description": "Conditions",
+  "authors": [
+    "Naveen Chawla <naveen.chwl@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
