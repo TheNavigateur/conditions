@@ -2,9 +2,9 @@
   <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
 </div>
 <div class="grid grid-pad">
-  <div  *ngFor="let hero of heroes | async" (click)="showSynonyms(hero)" class="col-1-4">
-    <div class="module hero">
-      <h4>{{hero.label}}</h4>
+  <div  *ngFor="let condition of conditions | async" (click)="showSynonyms(condition)" class="col-1-4">
+    <div class="module condition">
+      <h4>{{condition.label}}</h4>
     </div>
   </div>
 </div>
