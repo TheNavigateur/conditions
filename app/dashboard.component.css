@@ -29,20 +29,21 @@ h3 {
 	color: #eee;
 	max-height: 120px;
 	min-width: 120px;
-	background-color: #607D8B;
-  background-color: rgb(0,120,215);
+  background: rgb(0,120,215);
 	border-radius: 2px;
 }
 h4 {
   position: relative;
 }
 .module:hover {
-  background-color: #EEE;
-  background-color: #CCC;
+  transition: background 110ms, color 110ms, transform 110ms;
+  background: #CCC;
+  transform: scale(1.0425);
   cursor: pointer;
   color: #607d8b;
 }
 .grid-pad {
+  perspective: 10000px;
   padding: 10px 0;
 }
 .grid-pad > [class*='col-']:last-of-type {
